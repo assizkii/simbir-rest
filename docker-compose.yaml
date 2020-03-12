@@ -1,0 +1,35 @@
+version: '3'
+
+networks:
+  app:
+    driver: bridge
+
+services:
+  rest-server:
+    build: ./cmd/rest-server
+    depends_on:
+      - postgres
+    hostname: rest-server
+    restart: on-failure
+    ports:
+      - "5000:5000"
+    environment:
+      - REST_SERVER_DB=postgres://guard:password@postgres/ms_guard?sslmode=disable
+      - REST_SERVER_HOST=:5000
+      - REST_SERVER_LOGGER=1
+    networks:
+      - app
+
+  postgres:
+    image: postgres:11.1
+    restart: on-failure
+    environment:
+      POSTGRES_USER: guard
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: ms_guard
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./scripts/setup.sql:/docker-entrypoint-initdb.d/setup.sql
+    networks:
+      - app
