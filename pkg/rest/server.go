@@ -1,10 +1,10 @@
-package rest_server
+package rest
 
 import (
 	"log"
 	"net/http"
 	"os"
-	"simbir-rest/pkg/rest-server/utils"
+	"simbir-rest/pkg/rest/utils"
 )
 
 func RunServer()  {
@@ -20,7 +20,7 @@ func RunServer()  {
 		port = "3030" //localhost
 	}
 
-	log.Printf("server is listening at %s", conf.Host)
+	log.Printf("rest is listening at %s", conf.Host)
 
 	err := http.ListenAndServe(conf.Host, mux)
 

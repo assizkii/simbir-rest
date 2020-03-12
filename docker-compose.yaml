@@ -6,10 +6,10 @@ networks:
 
 services:
   rest-server:
-    build: ./cmd/rest-server
+    build: cmd/rest
     depends_on:
       - postgres
-    hostname: rest-server
+    hostname: rest
     restart: on-failure
     ports:
       - "5000:5000"

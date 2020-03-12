@@ -1,7 +1,7 @@
 # Dockerfile References: https://docs.docker.com/engine/reference/builder/
 
 # Start from the latest golang base image
-FROM golang:1.14 as builder
+FROM golang:1.13 as builder
 
 # Add Maintainer Info
 LABEL maintainer="Nickolay Kisluhin <n-kis@bitrix24.ru>"
@@ -13,7 +13,7 @@ WORKDIR /go/bin
 # Copy files
 COPY ./ ./
 # Build the Go app
-RUN go get -d -v && go build ./..
+RUN go get -d -v && go build -o rest-server ./...
 
 # STEP 2 build a small image
 # start from scratch
