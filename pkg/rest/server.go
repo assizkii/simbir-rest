@@ -4,7 +4,7 @@ import (
 	"log"
 	"net/http"
 	"os"
-	"simbir-rest/pkg/rest/utils"
+	"github.com/assizkii/simbir-rest/pkg/rest/utils"
 )
 
 func RunServer()  {
