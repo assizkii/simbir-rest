@@ -6,7 +6,7 @@ networks:
 
 services:
   rest-server:
-    build: cmd/rest
+    build: ./cmd/rest
     depends_on:
       - postgres
     hostname: rest
@@ -14,9 +14,10 @@ services:
     ports:
       - "5000:5000"
     environment:
-      - REST_SERVER_DB=postgres://guard:password@postgres/ms_guard?sslmode=disable
+      - REST_SERVER_DB=postgres://simbir:simbir@postgres/simbir_db?sslmode=disable
       - REST_SERVER_HOST=:5000
       - REST_SERVER_LOGGER=1
+      - LOG_FILE=./logs
     networks:
       - app
 
@@ -24,12 +25,12 @@ services:
     image: postgres:11.1
     restart: on-failure
     environment:
-      POSTGRES_USER: guard
-      POSTGRES_PASSWORD: password
-      POSTGRES_DB: ms_guard
+      POSTGRES_USER: simbir
+      POSTGRES_PASSWORD: simbir
+      POSTGRES_DB: simbir_db
     ports:
       - "5432:5432"
     volumes:
-      - ./scripts/setup.sql:/docker-entrypoint-initdb.d/setup.sql
+      - ./migrations/setup.sql:/docker-entrypoint-initdb.d/setup.sql
     networks:
       - app

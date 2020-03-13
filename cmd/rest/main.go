@@ -4,6 +4,6 @@ import (
 	"github.com/assizkii/simbir-rest/pkg/rest"
 )
 
-func main()  {
+func main() {
 	rest.RunServer()
 }
