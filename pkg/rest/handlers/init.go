@@ -18,7 +18,7 @@ func Init(st *interfaces.AppStorage) *RestHandler {
 }
 
 type HttpResponse struct {
-	Status int
+	Status int         `json:"status,omitempty"`
 	Result interface{} `json:"result,omitempty"`
 	Error  string      `json:"error,omitempty"`
 }
@@ -34,6 +34,9 @@ func showResponse(result *HttpResponse, w http.ResponseWriter) {
 	w.Write(response)
 }
 
+/**
+Хранение сессий
+ */
 func init() {
 	sessionConfig := &session.ManagerConfig{
 		CookieName:              "gosessionid",

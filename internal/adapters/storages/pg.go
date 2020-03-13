@@ -8,10 +8,7 @@ import (
 	"github.com/assizkii/simbir-rest/internal/entities"
 	_ "github.com/jackc/pgx/stdlib"
 	"github.com/jmoiron/sqlx"
-	"io/ioutil"
 	"log"
-	"os"
-	"path/filepath"
 	"strings"
 )
 
@@ -78,33 +75,5 @@ func NewPgStorage(dsn string) interfaces.AppStorage {
 	if err != nil {
 		log.Fatalf("Failed to connect: %v", err)
 	}
-	log.Printf(dsn)
-	err = Migrate(db)
-	if err != nil {
-		log.Fatalf("Failed to apply migrations: %v", err)
-	}
 	return &PgStorage{db}
-}
-
-// sql migrations from migrations folder
-func Migrate(db *sqlx.DB) error {
-	err := filepath.Walk("./migrations", func(path string, info os.FileInfo, err error) error {
-		if err != nil {
-			return err
-		}
-		if !info.IsDir() {
-			log.Println(path)
-			fileData, err := ioutil.ReadFile(path)
-			if err != nil {
-				return err
-			}
-			fileValue := string(fileData)
-			_, err = db.Exec(fileValue)
-			if err != nil {
-				return err
-			}
-		}
-		return nil
-	})
-	return err
 }

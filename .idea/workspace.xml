@@ -4,7 +4,8 @@
     <list default="true" id="86b10dae-f2e4-4dec-a7c7-5e347463be02" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/application.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/application.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/adapters/storages/pg.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/adapters/storages/pg.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pkg/rest/handlers/init.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/rest/handlers/init.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
