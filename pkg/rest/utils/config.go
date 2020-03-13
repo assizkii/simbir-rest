@@ -32,6 +32,7 @@ func InitConfig() *Config {
 
 func setLogFile(cfg Config) {
 	file, err := os.OpenFile(cfg.LogFile, os.O_RDWR|os.O_CREATE|os.O_APPEND, 0666)
+	log.Print(cfg.LogFile)
 	if err != nil {
 		log.Fatalf("error opening file: %v", err)
 	}
