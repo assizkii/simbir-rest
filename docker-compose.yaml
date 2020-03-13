@@ -7,6 +7,9 @@ networks:
 services:
   rest-server:
     build: cmd/rest
+    volumes:
+      - .:/go/src/simbir-rest
+    working_dir: /go/src/simbir-rest
     depends_on:
       - postgres
     hostname: rest
