@@ -2,25 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="86b10dae-f2e4-4dec-a7c7-5e347463be02" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internal/adapters/storages/pg.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internal/domain/usecases/account.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internal/domain/usecases/account_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internal/entities/user.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/migrations/setup.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pkg/rest/handlers/init.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pkg/rest/handlers/users.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmd/rest/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/rest/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/rest/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/rest/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/domain/interfaces/storage.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/domain/interfaces/storage.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/entities/account.go" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/pkg/rest/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/rest/server.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pkg/rest/utils/config.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/rest/utils/config.go" afterDir="false" />
     </list>

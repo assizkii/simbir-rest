@@ -27,7 +27,7 @@ func RunServer() {
 	mux.HandleFunc("/logout", handler.Logout)
 	mux.HandleFunc("/getNumber", handler.GetRandNumber)
 
-	log.Printf("rest is listening at %s", ":5000")
+	log.Printf("rest is listening at %s", conf.Host)
 
 	err := http.ListenAndServe(conf.Host, mux)
 

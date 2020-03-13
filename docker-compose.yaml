@@ -6,7 +6,7 @@ networks:
 
 services:
   rest-server:
-    build: ./cmd/rest
+    build: cmd/rest
     depends_on:
       - postgres
     hostname: rest
@@ -17,7 +17,7 @@ services:
       - REST_SERVER_DB=postgres://simbir:simbir@postgres/simbir_db?sslmode=disable
       - REST_SERVER_HOST=:5000
       - REST_SERVER_LOGGER=1
-      - LOG_FILE=./logs
+      - LOG_FILE=./logs/application.log
     networks:
       - app
 
