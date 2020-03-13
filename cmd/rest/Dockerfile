@@ -13,7 +13,7 @@ WORKDIR /go/bin
 # Copy files
 COPY ./ ./
 # Build the Go app
-RUN go get -d -v && go build -o rest ./...
+RUN go get -d -v && go test && go build -o rest ./...
 
 # STEP 2 build a small image
 # start from scratch
